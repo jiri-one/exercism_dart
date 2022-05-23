@@ -1,2 +1,2 @@
 # exercism_dart
-My solutions of Dart exercises on Exercism
+My solutions of Dart exercises on Exercism.org
