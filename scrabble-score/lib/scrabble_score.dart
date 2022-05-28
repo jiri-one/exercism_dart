@@ -7,31 +7,31 @@ List eight_points = <String>['J', 'X'];
 List ten_points = <String>['Q', 'Z'];
 
 int score(String letters) {
-  letters = letters.toUpperCase();
-  int points = 0;
-  // for (int i = 0; i < letters.length; i++) {
-  //   ....letters[i]
-  // }
-  letters.split("").forEach((char) {
-    if (one_point.contains(char)) {
-      points++;
-    } else if (two_points.contains(char)) {
-      points += 2;
-    } else if (three_points.contains(char)) {
-      points += 3;
-    } else if (four_points.contains(char)) {
-      points += 4;
-    } else if (five_points.contains(char)) {
-      points += 5;
-    } else if (eight_points.contains(char)) {
-      points += 8;
-    } else if (ten_points.contains(char)) {
-      points += 10;
-    }
-  });
-  return points;
+    letters = letters.toUpperCase();
+    int points = 0;
+    // for (int i = 0; i < letters.length; i++) {
+    //     ....letters[i]
+    // }
+    letters.split("").forEach((char) {
+        if (one_point.contains(char)) {
+            points++;
+        } else if (two_points.contains(char)) {
+            points += 2;
+        } else if (three_points.contains(char)) {
+            points += 3;
+        } else if (four_points.contains(char)) {
+            points += 4;
+        } else if (five_points.contains(char)) {
+            points += 5;
+        } else if (eight_points.contains(char)) {
+            points += 8;
+        } else if (ten_points.contains(char)) {
+            points += 10;
+        }
+    });
+    return points;
 }
 
 void main() {
-  score("letters");
+    score("letters");
 }
