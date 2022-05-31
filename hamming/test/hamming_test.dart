@@ -45,14 +45,14 @@ void main() {
 
     test('disallow second strand longer', () {
       expect(() => hamming.distance('ATA', 'AGTG'), throwsA(mustEqual));
-    }, skip: true);
+    }, skip: false);
 
     test('disallow left empty strand', () {
       expect(() => hamming.distance('', 'G'), throwsA(noEmptyStrand));
-    }, skip: true);
+    }, skip: false);
 
     test('disallow right empty strand', () {
       expect(() => hamming.distance('G', ''), throwsA(noEmptyStrand));
-    }, skip: true);
+    }, skip: false);
   });
 }
