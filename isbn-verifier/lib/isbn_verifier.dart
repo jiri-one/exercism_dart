@@ -13,9 +13,6 @@ bool isValid(String isbn) {
         i--;
     }
     var sum = finalList.reduce((num value, num element) => value + element);
-    if (sum % (isbnList.length + 1) == 0) {
-        return true;
-    } else {
-        return false;
-    }
+    bool result = sum % (isbnList.length + 1) == 0;
+    return result;
 }
