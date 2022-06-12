@@ -16,7 +16,7 @@ void main() {
     test('valid isbn number with a check digit of 10', () {
       final bool result = isValid('3-598-21507-X');
       expect(result, equals(true));
-    }, skip: true);
+    }, skip: false);
 
     test('check digit is a character other than X', () {
       final bool result = isValid('3-598-21507-A');

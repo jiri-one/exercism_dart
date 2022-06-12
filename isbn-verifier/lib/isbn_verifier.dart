@@ -1,5 +1,8 @@
 bool isValid(String isbn) {
-    var isbnList = isbn.split("").where((element) => element != "-").toList();
+    var isbnList = isbn.split("")
+            .where((element) => element != "-")
+            .map((e) => e == "X"? e = "10": e)
+            .toList();
     List<num> finalList = []; 
     int i = isbnList.length;
     for (String element in isbnList) {
