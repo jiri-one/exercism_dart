@@ -21,17 +21,17 @@ void main() {
     test('check digit is a character other than X', () {
       final bool result = isValid('3-598-21507-A');
       expect(result, equals(false));
-    }, skip: true);
+    }, skip: false);
 
     test('invalid character in isbn', () {
       final bool result = isValid('3-598-P1581-X');
       expect(result, equals(false));
-    }, skip: true);
+    }, skip: false);
 
     test('X is only valid as a check digit', () {
       final bool result = isValid('3-598-2X507-9');
       expect(result, equals(false));
-    }, skip: true);
+    }, skip: false);
 
     test('valid isbn without separating dashes', () {
       final bool result = isValid('3598215088');

@@ -6,6 +6,7 @@ bool isValid(String isbn) {
     List<num> finalList = []; 
     int i = isbnList.length;
     for (String element in isbnList) {
+        if (!RegExp(r"\d+").hasMatch(element)) {return false;};
         finalList.add(int.parse(element) * i);
         i--;
     }
