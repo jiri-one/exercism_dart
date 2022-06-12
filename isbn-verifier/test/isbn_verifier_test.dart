@@ -36,56 +36,56 @@ void main() {
     test('valid isbn without separating dashes', () {
       final bool result = isValid('3598215088');
       expect(result, equals(true));
-    }, skip: true);
+    }, skip: false);
 
     test('isbn without separating dashes and X as check digit', () {
       final bool result = isValid('359821507X');
       expect(result, equals(true));
-    }, skip: true);
+    }, skip: false);
 
     test('isbn without check digit and dashes', () {
       final bool result = isValid('359821507');
       expect(result, equals(false));
-    }, skip: true);
+    }, skip: false);
 
     test('too long isbn and no dashes', () {
       final bool result = isValid('3598215078X');
       expect(result, equals(false));
-    }, skip: true);
+    }, skip: false);
 
     test('too short isbn', () {
       final bool result = isValid('00');
       expect(result, equals(false));
-    }, skip: true);
+    }, skip: false);
 
     test('isbn without check digit', () {
       final bool result = isValid('3-598-21507');
       expect(result, equals(false));
-    }, skip: true);
+    }, skip: false);
 
     test('check digit of X should not be used for 0', () {
       final bool result = isValid('3-598-21515-X');
       expect(result, equals(false));
-    }, skip: true);
+    }, skip: false);
 
     test('empty isbn', () {
       final bool result = isValid('');
       expect(result, equals(false));
-    }, skip: true);
+    }, skip: false);
 
     test('input is 9 characters', () {
       final bool result = isValid('134456729');
       expect(result, equals(false));
-    }, skip: true);
+    }, skip: false);
 
     test('invalid characters are not ignored', () {
       final bool result = isValid('3132P34035');
       expect(result, equals(false));
-    }, skip: true);
+    }, skip: false);
 
     test('input is too long but contains a valid isbn', () {
       final bool result = isValid('98245726788');
       expect(result, equals(false));
-    }, skip: true);
+    }, skip: false);
   });
 }
